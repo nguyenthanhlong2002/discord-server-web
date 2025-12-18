@@ -3,71 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hướng Dẫn Sử Dụng Bot</title>
+    <title>Hướng Dẫn Bot Server</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
-    <a href="index.html">🏠 Trang Chủ</a>
-    <a href="guide.html">📚 Hướng Dẫn Bot</a>
-    <a href="gallery.html">📸 Kho Kỷ Niệm</a>
-    <a href="minecraft.html">⛏️ Minecraft Mod</a>
-</nav>
+        <a href="index.html">🏠 Trang Chủ</a>
+        <a href="guide.html" class="active">📚 Hướng Dẫn Bot</a>
+        <a href="gallery.html">📸 Kho Kỷ Niệm</a>
+        <a href="minecraft.html">⛏️ Minecraft Mod</a>
+    </nav>
 
-    <div class="container">
-        <h1>Hướng Dẫn Các Bot Cơ Bản</h1>
-        <p class="intro-text">Tổng hợp các lệnh cần thiết để bạn quẩy nát server.</p>
+    <!-- HEADER -->
+    <header class="mod-header" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://files.cults3d.com/uploaders/14295325/illustration-file/9ce1902d-6e1d-400d-953e-3f5f8b965c71/Discord_Logo_Wordmark_Color.png');">
+        <h1>📚 Wiki Hướng Dẫn Bot</h1>
+        <p>Tổng hợp tất cả các lệnh cần thiết để sinh tồn trong Server</p>
+    </header>
 
-        <!-- MỤC 1: BOT NHẠC -->
-        <div class="guide-box">
-            <h2>🎵 1. Bot Nhạc (Jockie Music)</h2>
-            <p>Dùng để nghe nhạc chất lượng cao. Server có 4 con bot, nếu con 1 bận hãy dùng con 2.</p>
+    <div class="wiki-container">
+        <!-- CỘT TRÁI: MỤC LỤC BOT -->
+        <aside class="sidebar">
+            <h3>🤖 Danh Sách Bot</h3>
+            <ul>
+                <li><a href="#jockie">🎵 Jockie Music (Nghe nhạc)</a></li>
+                <li><a href="#owo">🦁 Owo Bot (Cày thú)</a></li>
+                <li><a href="#mimu">💳 Mimu (Tiền tệ)</a></li>
+                <li><a href="#moderation">🛡️ Lệnh cho Admin</a></li>
+            </ul>
+        </aside>
+
+        <!-- CỘT PHẢI: NỘI DUNG CHI TIẾT -->
+        <main class="wiki-content">
             
-            <div class="command-list">
-                <div class="cmd-item">
-                    <code>m!play [tên bài]</code>
-                    <span>Phát nhạc (Ví dụ: m!play Sơn Tùng)</span>
+            <!-- PHẦN 1: JOCKIE MUSIC -->
+            <section id="jockie">
+                <h2 style="color: #5865F2;">🎵 Jockie Music (Bot Nhạc Chính)</h2>
+                <p>Server sử dụng hệ thống 4 Bot Jockie để nhiều nhóm có thể nghe nhạc cùng lúc.</p>
+                
+                <div class="alert-box" style="background-color: #2f3136; border-left: 5px solid #5865F2;">
+                    <strong>💡 Quy tắc gọi Bot:</strong>
+                    <ul>
+                        <li>Jockie 1 (Màu đỏ): Dùng lệnh <code>m!play</code></li>
+                        <li>Jockie 2 (Màu xanh): Dùng lệnh <code>m2!play</code></li>
+                        <li>Jockie 3 (Màu tím): Dùng lệnh <code>m3!play</code></li>
+                        <li>Jockie 4 (Màu cam): Dùng lệnh <code>m4!play</code></li>
+                    </ul>
                 </div>
-                <div class="cmd-item">
-                    <code>m!skip</code>
-                    <span>Bỏ qua bài hiện tại</span>
-                </div>
-                <div class="cmd-item">
-                    <code>m!leave</code>
-                    <span>Đuổi bot ra khỏi phòng</span>
-                </div>
-                <div class="cmd-item">
-                    <code>m!lyrics</code>
-                    <span>Xem lời bài hát</span>
-                </div>
-            </div>
-            <p class="note">💡 Mẹo: Nếu dùng Jockie 2 thì đổi lệnh thành <code>m2!play</code></p>
-        </div>
 
-        <!-- MỤC 2: BOT TIỆN ÍCH -->
-        <div class="guide-box">
-            <h2>🤖 2. Bot Tiện Ích (Ví dụ: Owo, Mimu)</h2>
-            <p>Các chức năng cày cuốc và giải trí.</p>
-
-            <div class="command-list">
-                <div class="cmd-item">
-                    <code>/rank</code>
-                    <span>Xem cấp độ của bạn</span>
+                <h3>Các lệnh cơ bản (Ví dụ cho Bot 1)</h3>
+                <div class="command-list">
+                    <div class="cmd-item">
+                        <code>m!play [tên bài/link]</code>
+                        <span>Phát nhạc (Hỗ trợ Youtube, Spotify)</span>
+                    </div>
+                    <div class="cmd-item">
+                        <code>m!skip</code>
+                        <span>Bỏ qua bài hiện tại</span>
+                    </div>
+                    <div class="cmd-item">
+                        <code>m!leave</code>
+                        <span>Đuổi bot ra khỏi phòng (để đỡ tốn RAM)</span>
+                    </div>
+                    <div class="cmd-item">
+                        <code>m!loop queue</code>
+                        <span>Lặp lại cả danh sách nhạc</span>
+                    </div>
+                    <div class="cmd-item">
+                        <code>m!shuffle</code>
+                        <span>Trộn bài ngẫu nhiên</span>
+                    </div>
                 </div>
-                <div class="cmd-item">
-                    <code>/avatar</code>
-                    <span>Xem ảnh đại diện kích thước lớn</span>
-                </div>
-            </div>
-        </div>
+            </section>
 
+            <hr>
+
+            <!-- PHẦN 2: OWO BOT -->
+            <section id="owo">
+                <h2 style="color: #f1c40f;">🦁 Owo Bot (Giải Trí)</h2>
+                <p>Bot cày cuốc săn thú phổ biến nhất Discord.</p>
+                
+                <div class="command-list">
+                    <div class="cmd-item">
+                        <code>owo hunt</code>
+                        <span>Đi săn thú (Tốn năng lượng)</span>
+                    </div>
+                    <div class="cmd-item">
+                        <code>owo battle</code>
+                        <span>Cho thú đi đánh nhau kiếm tiền</span>
+                    </div>
+                    <div class="cmd-item">
+                        <code>owo zoo</code>
+                        <span>Xem sở thú của bạn</span>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+             <!-- PHẦN 3: MIMU -->
+             <section id="mimu">
+                <h2 style="color: #e91e63;">💳 Mimu (Shop & Tiền Tệ)</h2>
+                <p>Hệ thống kinh tế của server, dùng để mua role màu hoặc vật phẩm.</p>
+                <div class="command-list">
+                    <div class="cmd-item">
+                        <code>/daily</code>
+                        <span>Điểm danh nhận tiền hàng ngày</span>
+                    </div>
+                    <div class="cmd-item">
+                        <code>/balance</code>
+                        <span>Xem số dư tài khoản</span>
+                    </div>
+                </div>
+            </section>
+
+        </main>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Hướng dẫn Server Discord.</p>
-    </footer>
-
+    <footer><p>&copy; 2025 Server Guide.</p></footer>
 </body>
 </html>
